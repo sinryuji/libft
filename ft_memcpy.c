@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 22:05:37 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/09 23:41:03 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/10 23:44:09 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
     size_t  i;
 
+    if (!dest || !src)
+	return (0);
     i = 0;
     while (i < n)
     {
