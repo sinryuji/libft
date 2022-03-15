@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 12:59:28 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/15 21:10:40 by hyeongki         ###   ########.fr       */
+/*   Created: 2022/03/15 20:29:20 by hyeongki          #+#    #+#             */
+/*   Updated: 2022/03/15 20:40:57 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_atoi(const char *str)
 {
-	size_t	ret;
-	size_t	i;
+	int	m_flag;
+	int	result;
 
-	ret = 0;
-	i = 0;
-	while (src[ret])
-		ret++;
-	if (size == 0)
-		return (ret);
-	while (src[i] && i < size - 1)
+	m_flag = 0;
+	result = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		dst[i] = src[i];
-		i++;
+		if (*str == '-')
+			m_flag = 1;
+		str++;
 	}
-	dst[i] = 0;
-	return (ret);
+	while (*str >= '0' && *str <= '9')
+	{
+		result *= 10;
+		result += *str - '0';
+		str++;
+	}
+	if (m_flag)
+		result *= -1;
+	return (result);
 }

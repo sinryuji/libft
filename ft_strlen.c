@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 22:48:43 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/08 00:40:07 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/15 21:11:15 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *c)
 {
-    size_t  i;
+	size_t	i;
 
-    i = 0;
-    while (c[i])
-	i++;
-    return (i);
+	i = 0;
+	while (c[i])
+		i++;
+	return (i);
 }

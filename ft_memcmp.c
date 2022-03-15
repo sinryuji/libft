@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 12:59:28 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/15 21:10:40 by hyeongki         ###   ########.fr       */
+/*   Created: 2022/03/15 19:26:36 by hyeongki          #+#    #+#             */
+/*   Updated: 2022/03/15 21:02:37 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	ret;
-	size_t	i;
+	size_t			i;
+	unsigned char	*c1;
+	unsigned char	*c2;
 
-	ret = 0;
 	i = 0;
-	while (src[ret])
-		ret++;
-	if (size == 0)
-		return (ret);
-	while (src[i] && i < size - 1)
-	{
-		dst[i] = src[i];
+	c1 = (unsigned char *)s1;
+	c2 = (unsigned char *)s2;
+	while (c1[i] && c2[i] && c1[i] == c2[i] && i < n)
 		i++;
-	}
-	dst[i] = 0;
-	return (ret);
+	if (i == n)
+		return (0);
+	return (c1[i] - c2[i]);
 }
