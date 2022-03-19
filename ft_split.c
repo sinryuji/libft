@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 21:00:41 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/18 23:35:38 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/19 18:43:02 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ size_t	get_word_cnt(char const *s, char c)
 	}
 	return (cnt);
 }
-
 
 int	split_str(char **ret, char const *s, char c)
 {
