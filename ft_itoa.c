@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 18:44:05 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/19 20:02:55 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/20 14:38:30 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,6 @@ char	*ft_itoa(int n)
 {
 	int		len;
 	char	*ret;
-	int		div;
-	int		i;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
