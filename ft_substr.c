@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 23:07:42 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/20 14:59:42 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/22 02:02:11 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (ft_strlen(s) <= start)
 		return (ft_strdup(""));
+	if (len > ft_strlen(s))
+		len = ft_strlen(s);
 	ret = malloc(sizeof(char) * (len + 1));
 	i = 0;
 	if (!ret)

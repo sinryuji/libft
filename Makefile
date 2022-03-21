@@ -6,7 +6,7 @@
 #    By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 00:26:55 by hyeongki          #+#    #+#              #
-#    Updated: 2022/03/22 00:18:10 by hyeongki         ###   ########.fr        #
+#    Updated: 2022/03/22 04:25:47 by hyeongki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,10 +26,16 @@ RM = rm -f
 NAME = libft.a
 AR = ar rcus
 
-$(NAME) : $(OBJS)
-	    $(AR) $@ $^
+ifdef BONUS_FLAG
+	OBJ = $(BONUS_OBJS)
+else
+	OBJ = $(OBJS)
+endif
 
 all : $(NAME)
+
+$(NAME) : $(OBJ)
+	    $(AR) $@ $^
 
 clean : 
 	$(RM) $(OBJS) $(BONUS_OBJS)
@@ -39,8 +45,8 @@ fclean : clean
 
 re : fclean all
 
-bonus : $(BONUS_OBJS)
-		$(AR) $(NAME) $^
+bonus :
+		make BONUS_FLAG=1 all
 
 .PHONY :
 	all clean fclean re bonus

@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 19:26:36 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/15 21:02:37 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/22 01:45:59 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*c2;
 
 	i = 0;
+	if (n == 0)
+		return (0);
 	c1 = (unsigned char *)s1;
 	c2 = (unsigned char *)s2;
-	while (c1[i] && c2[i] && c1[i] == c2[i] && i < n)
+	while (c1[i] == c2[i] && i < n)
 		i++;
 	if (i == n)
-		return (0);
+		i--;
 	return (c1[i] - c2[i]);
 }
