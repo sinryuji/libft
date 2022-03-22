@@ -6,20 +6,20 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 19:49:56 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/23 00:17:30 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/23 00:19:59 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	check(const char *haystack, const char *needle, size_t i, size_t len)
+static int	check(const char *hs, const char *nd, size_t i, size_t len)
 {
 	size_t	j;
 
 	j = 0;
-	while (needle[j])
+	while (nd[j])
 	{
-		if (haystack[i] != needle[j])
+		if (hs[i] != nd[j])
 			return (0);
 		j++;
 		i++;
