@@ -6,13 +6,13 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 21:00:41 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/22 23:18:49 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/23 00:16:44 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	get_word_cnt(char const *s, char c)
+static size_t	get_word_cnt(char const *s, char c)
 {
 	size_t	cnt;
 
@@ -31,7 +31,7 @@ size_t	get_word_cnt(char const *s, char c)
 	return (cnt);
 }
 
-void	ret_free(char **ret)
+static void	ret_free(char **ret)
 {
 	size_t	i;
 
@@ -44,7 +44,7 @@ void	ret_free(char **ret)
 	free(ret);
 }
 
-char	*ft_strndup(const char *s1, size_t n)
+static char	*ft_strndup(const char *s1, size_t n)
 {
 	char	*result;
 	size_t	i;
@@ -62,7 +62,7 @@ char	*ft_strndup(const char *s1, size_t n)
 	return (result);
 }
 
-int	split_str(char **ret, char const *s, char c)
+static int	split_str(char **ret, char const *s, char c)
 {
 	size_t	word_i;
 	size_t	ret_i;

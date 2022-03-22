@@ -6,13 +6,13 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 18:44:05 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/22 23:10:58 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/23 00:15:06 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_nbrlen(int n)
+static int	get_nbrlen(int n)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ int	get_nbrlen(int n)
 	return (i);
 }
 
-int	get_div(int len)
+static int	get_div(int len)
 {
 	int	i;
 
@@ -47,7 +47,7 @@ int	get_div(int len)
 	return (i);
 }
 
-void	do_itoa(char *ret, int n, int len)
+static void	do_itoa(char *ret, int n, int len)
 {
 	int	div;
 	int	i;
