@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 21:00:41 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/20 15:06:33 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/22 23:18:49 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,37 @@ size_t	get_word_cnt(char const *s, char c)
 	return (cnt);
 }
 
+void	ret_free(char **ret)
+{
+	size_t	i;
+
+	i = 0;
+	while (ret[i])
+	{
+		free(ret[i]);
+		i++;
+	}
+	free(ret);
+}
+
+char	*ft_strndup(const char *s1, size_t n)
+{
+	char	*result;
+	size_t	i;
+
+	result = malloc(sizeof(char) * (n + 1));
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (s1[i] && i < n)
+	{
+		result[i] = s1[i];
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
+}
+
 int	split_str(char **ret, char const *s, char c)
 {
 	size_t	word_i;
@@ -50,7 +81,7 @@ int	split_str(char **ret, char const *s, char c)
 		ret[ret_i] = ft_strndup(s, word_i);
 		if (!ret[ret_i])
 		{
-			ft_dp_free((void **)ret);
+			ret_free(ret);
 			return (0);
 		}
 		s += word_i;

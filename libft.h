@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:59:27 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/22 00:33:35 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/22 23:22:44 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,10 +70,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-// Extra functions
-char	*ft_strndup(const char *s1, size_t n);
-void	ft_dp_free(void	**dp);
-int		ft_nbrlen(int n);
 
 #endif

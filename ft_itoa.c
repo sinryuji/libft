@@ -6,11 +6,31 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 18:44:05 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/20 14:38:30 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/22 23:10:58 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	get_nbrlen(int n)
+{
+	int	i;
+
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		i++;
+		n *= -1;
+	}
+	while (n > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
+}
 
 int	get_div(int len)
 {
@@ -58,7 +78,7 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	len = ft_nbrlen(n);
+	len = get_nbrlen(n);
 	ret = malloc(sizeof(char) * (len + 1));
 	if (!ret)
 		return (NULL);
