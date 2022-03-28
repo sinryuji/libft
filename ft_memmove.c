@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 22:18:26 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/15 21:39:55 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/28 19:32:24 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {	
 	size_t	i;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (0);
 	i = 0;
 	if (dest > src)

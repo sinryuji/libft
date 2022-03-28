@@ -6,14 +6,16 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 20:29:20 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/15 20:40:57 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/28 20:26:32 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(const char *str)
 {
-	int	m_flag;
-	int	result;
+	int				m_flag;
+	unsigned long	result;
 
 	m_flag = 0;
 	result = 0;
@@ -27,10 +29,13 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		result *= 10;
-		result += *str - '0';
+		result = result * 10 + (*str - '0');
 		str++;
 	}
+	if (result > LONG_MAX && !m_flag)
+		return (-1);
+	if (result > LONG_MAX && m_flag)
+		return (0);
 	if (m_flag)
 		result *= -1;
 	return (result);

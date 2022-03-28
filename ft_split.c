@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 21:00:41 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/23 00:16:44 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/28 21:01:26 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ static char	*ft_strndup(const char *s1, size_t n)
 	char	*result;
 	size_t	i;
 
+	if (!s1)
+		return (NULL);
 	result = malloc(sizeof(char) * (n + 1));
 	if (!result)
 		return (NULL);

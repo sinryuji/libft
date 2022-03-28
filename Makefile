@@ -6,7 +6,7 @@
 #    By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 00:26:55 by hyeongki          #+#    #+#              #
-#    Updated: 2022/03/23 00:02:39 by hyeongki         ###   ########.fr        #
+#    Updated: 2022/03/28 19:13:17 by hyeongki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ fclean : clean
 re : fclean all
 
 bonus :
-		make BONUS_FLAG=1
+		make BONUS_FLAG=1 all
 
 .PHONY :
 	all clean fclean re bonus

@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 00:18:16 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/03/22 00:25:32 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/03/28 20:58:11 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*tmp;
 	t_list	*ret;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	tmp = lst;
 	ret = NULL;
