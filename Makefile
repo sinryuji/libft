@@ -6,7 +6,7 @@
 #    By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 00:26:55 by hyeongki          #+#    #+#              #
-#    Updated: 2022/04/07 22:40:27 by hyeongki         ###   ########.fr        #
+#    Updated: 2022/04/08 00:07:37 by hyeongki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,13 @@ else
 	OBJ = $(OBJS)
 endif
 
-all : $(NAME)
+%.o : %.c
+	$(CC) $(CFALGS) -c $< -o $@
 
 $(NAME) : $(OBJ)
-	    $(AR) $@ $^
+	$(AR) $@ $^
+
+all : $(NAME)
 
 clean : 
 	$(RM) $(OBJS) $(BONUS_OBJS)
