@@ -6,7 +6,7 @@
 #    By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 00:26:55 by hyeongki          #+#    #+#              #
-#    Updated: 2022/03/28 19:13:17 by hyeongki         ###   ########.fr        #
+#    Updated: 2022/04/07 22:40:27 by hyeongki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_b
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 RM = rm -f
 NAME = libft.a
-AR = ar rcus
+AR = ar rcs
 
 ifdef BONUS_FLAG
 	OBJ = $(OBJS) $(BONUS_OBJS)
