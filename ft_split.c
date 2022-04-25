@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 21:00:41 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/04/13 12:21:40 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/04/25 13:09:53 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,26 +42,6 @@ static void	ret_free(char **ret)
 		i++;
 	}
 	free(ret);
-}
-
-static char	*ft_strndup(const char *s1, size_t n)
-{
-	char	*result;
-	size_t	i;
-
-	if (!s1)
-		return (NULL);
-	result = malloc(sizeof(char) * (n + 1));
-	if (!result)
-		return (NULL);
-	i = 0;
-	while (s1[i] && i < n)
-	{
-		result[i] = s1[i];
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
 }
 
 static int	split_str(char **ret, char const *s, char c)
