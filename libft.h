@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:59:27 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/05/26 17:45:42 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/05/30 13:42:14 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 // My Custom Functions
 int		ft_nbrlen_base(int n, int base);
-char	*ft_itoa_base(int n , int base);
+char	*ft_itoa_base(int n, int base);
+int		ft_max(int a, int b);
+int		ft_min(int a, int b);
+
 #endif
