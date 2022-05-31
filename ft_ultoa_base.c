@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen_base.c                                   :+:      :+:    :+:   */
+/*   ft_ultoa_base.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/26 17:27:09 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/06/01 00:35:46 by hyeongki         ###   ########.fr       */
+/*   Created: 2022/05/26 17:33:35 by hyeongki          #+#    #+#             */
+/*   Updated: 2022/06/01 00:29:27 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen_base(long long n, int base)
+char	*ft_ultoa_base(unsigned long n, int base)
 {
-	int	i;
+	char	*ret;
+	int		len;
+	int		i;
 
 	i = 0;
-	if (n == 0)
-		return (1);
-	if (n < 0)
+	len = ft_ullen_base(n, base);
+	ret = malloc(sizeof(char) * (len + 1));
+	if (!ret)
+		return (NULL);
+	ret[len] = '\0';
+	while (--len >= i)
 	{
-		n *= -1;
-		i++;
-	}
-	while (n)
-	{
+		ret[len] = HEX_LOWER[n % base];
 		n /= base;
-		i++;
 	}
-	return (i);
+	return (ret);
 }

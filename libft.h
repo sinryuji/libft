@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:59:27 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/05/31 16:44:47 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/06/01 00:27:14 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,7 @@ int		ft_nbrlen_base(long long n, int base);
 char	*ft_itoa_base(long long n, int base);
 int		ft_max(int a, int b);
 int		ft_min(int a, int b);
+int		ft_ullen_base(unsigned long n, int base);
+char	*ft_ultoa_base(unsigned long n, int base);
 
 #endif
