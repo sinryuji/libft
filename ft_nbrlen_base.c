@@ -6,13 +6,13 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 17:27:09 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/05/26 17:33:07 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/05/31 16:44:37 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen_base(int n, int base)
+int	ft_nbrlen_base(long long n, int base)
 {
 	int	i;
 
