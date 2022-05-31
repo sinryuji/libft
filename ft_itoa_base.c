@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 17:33:35 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/05/31 16:44:06 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/05/31 17:48:55 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_itoa_base(long long n, int base)
 	}
 	while (--len > i)
 	{
-		ret[len - 1] = HEX_UPPER[n % base];
+		ret[len - 1] = HEX_LOWER[n % base];
 		n /= base;
 	}
 	return (ret);
