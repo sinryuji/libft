@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 13:41:26 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/05/30 13:41:51 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/06/02 16:04:50 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_min(int a, int b)
 {
 	if (a > b)
-		return b;
+		return (b);
 	else
-		return a;
+		return (a);
 }
