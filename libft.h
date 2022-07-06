@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:59:27 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/06/01 00:27:14 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/07/06 17:56:37 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <unistd.h>
-# include <limits.h>
 
 # define HEX_LOWER "0123456789abcdef"
 # define HEX_UPPER "0123456789ABCDEF"

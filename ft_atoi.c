@@ -6,11 +6,12 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 20:29:20 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/04/13 12:17:41 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/07/06 18:11:02 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 int	ft_atoi(const char *str)
 {
