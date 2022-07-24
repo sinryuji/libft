@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 20:29:20 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/07/24 21:12:24 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/07/24 21:13:16 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 #include <limits.h>
 
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
-	int				m_flag;
-	unsigned long	result;
+	int		m_flag;
+	long	result;
 
 	m_flag = 0;
 	result = 0;
@@ -33,10 +33,6 @@ int	ft_atoi(const char *str)
 		result = result * 10 + (*str - '0');
 		str++;
 	}
-	if (result > LONG_MAX && !m_flag)
-		return (-1);
-	if (result > LONG_MAX && m_flag)
-		return (0);
 	if (m_flag)
 		result *= -1;
 	return (result);
