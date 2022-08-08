@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:59:27 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/07/24 21:13:36 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/08/08 21:56:46 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,6 @@ int		ft_ullen_base(unsigned long n, int base);
 char	*ft_ultoa_base(unsigned long n, int base);
 int		ft_puterr(char *str);
 long	ft_atol(const char *str);
+void	ft_split_free(char **split);
 
 #endif
