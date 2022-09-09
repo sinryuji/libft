@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:59:27 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/08/18 19:51:37 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/09/09 20:05:31 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ int		ft_puterr(char *str);
 long	ft_atol(const char *str);
 void	ft_split_free(char **split);
 double	ft_pow(double x, double y);
+char	*get_next_line(int fd);
 
 #endif
