@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 20:54:26 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/04/13 12:21:48 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/09/09 15:17:46 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strdup(const char *s1)
 	char	*result;
 	int		i;
 
+	if (!s1)
+		return (NULL);
 	len = ft_strlen(s1);
 	result = malloc(sizeof(char) * (len + 1));
 	if (!result)
