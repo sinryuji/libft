@@ -6,7 +6,7 @@
 #    By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 00:26:55 by hyeongki          #+#    #+#              #
-#    Updated: 2022/09/09 19:59:45 by hyeongki         ###   ########.fr        #
+#    Updated: 2022/09/14 16:19:48 by hyeongki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,11 @@ RM = rm -f
 NAME = libft.a
 AR = ar rcs
 
+# Colors
+GREEN = \x1b[32m
+RED = \x1b[31m
+RESET = \x1b[0m
+
 ifdef BONUS_FLAG
 	OBJ = $(OBJS) $(BONUS_OBJS)
 else
@@ -37,23 +42,29 @@ else
 endif
 
 %.o : %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "$(GREEN).$(RESET)\c"
 
 $(NAME) : $(OBJ)
-	$(AR) $@ $^
+	@$(AR) $@ $^
+	@echo "\n$(NAME): $(GREEN)$(NAME) was created$(RESET)"
+
 
 all : $(NAME)
 
 clean : 
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	@$(RM) $(OBJS) $(BONUS_OBJS)
+	@echo "$(NAME): $(RED)object files were deleted$(RESET)"
+
 
 fclean : clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
+	@echo "$(NAME): $(RED)$(NAME) was deleted$(RESET)"
 
 re : fclean all
 
 bonus :
-		make BONUS_FLAG=1 all
+		@make BONUS_FLAG=1 all
 
 .PHONY :
 	all clean fclean re bonus
