@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:59:27 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/09/09 20:05:31 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/09/16 17:56:25 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,6 @@ long	ft_atol(const char *str);
 void	ft_split_free(char **split);
 double	ft_pow(double x, double y);
 char	*get_next_line(int fd);
+int		ft_atoi_hex(char *str);
 
 #endif
