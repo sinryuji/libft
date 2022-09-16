@@ -6,7 +6,7 @@
 /*   By: hyeongki <hyeongki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 17:23:06 by hyeongki          #+#    #+#             */
-/*   Updated: 2022/09/16 17:57:13 by hyeongki         ###   ########.fr       */
+/*   Updated: 2022/09/16 18:12:11 by hyeongki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	get_m_flag(char **str)
 	return (ret);
 }
 
-int	ft_atoi_hexa(char *str)
+int	ft_atoi_hex(char *str)
 {
 	unsigned int	ret;
 	int				m_flag;
